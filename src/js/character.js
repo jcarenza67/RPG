@@ -84,3 +84,27 @@ export const addMagic = magic(1);
 
 export const dexterity = changeState("dexterity");
 export const addDexterity = dexterity(1);
+
+export const health = changeState("health");
+export const addHealth = health(1);
+
+export const createCharacter = (name, type) => state => ({
+  ...state,
+  name,
+  type,
+  attributes: {
+    intelligence: 0,
+    strength: 0,
+    magic: 0,
+    dexterity: 0,
+    health: 100
+  },
+});
+
+export let myCharacter = createCharacter();
+myCharacter = stateControl(myCharacter(""));
+myCharacter = stateControl(addIntelligence);
+myCharacter = stateControl(addStrength);
+myCharacter = stateControl(addMagic);
+myCharacter = stateControl(addDexterity);
+myCharacter = stateControl(addHealth);

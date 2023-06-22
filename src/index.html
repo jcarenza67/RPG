@@ -2,28 +2,27 @@
   <head>
     <title>RPG game</title>
   </head>
-  <body>
-    <div>
-      <h1>Character Creator</h1> 
-      <input id="name" type="text" placeholder="Enter Character's Name" />
-
-      <button id="createCharacter">Create Character</button>
-
-      <button id="addIntelligence">Add Intelligence</button>
-      <button id="addStrength">Add Strength</button>
-      <button id="addMagic">Add Magic</button>
-      <button id="addDexterity">Add Dexterity</button>
-    </div>
-
-    <div id="container">
+  <body class="p-3 m-0">
+    <div class="container character-container">
+      <h1>Character Creator</h1>
+      <div class="form-group">
+          <input id="name" type="text" class="form-control" placeholder="Enter Character's Name" />
+      </div>
+      <div class="btn-group" role="group" aria-label="Character Actions">
+          <button id="createCharacter" class="btn btn-primary">Create Character</button>
+          <button id="addIntelligence" class="btn btn-secondary">Add Intelligence</button>
+          <button id="addStrength" class="btn btn-secondary">Add Strength</button>
+          <button id="addMagic" class="btn btn-secondary">Add Magic</button>
+          <button id="addDexterity" class="btn btn-secondary">Add Dexterity</button>
+      </div>
+  </div>
+  <div class="container character-container">
       <h1>Character</h1>
-        <p id="characterName"></p>
-        <p id="characterIntelligence"></p>
-        <p id="characterStrength"></p>
-        <p id="characterMagic"></p>
-        <p id="characterDexterity"></p>
-    </div>
-    <script type="text/javascript" src="./js/index.js"></script>
-    <script type="text/javascript" src="./js/character.js"></script>
+      <p class="character-attributes"><strong>Name:</strong> <span id="characterName"></span></p>
+      <p class="character-attributes"><strong>Intelligence:</strong> <span id="characterIntelligence"></span></p>
+      <p class="character-attributes"><strong>Strength:</strong> <span id="characterStrength"></span></p>
+      <p class="character-attributes"><strong>Magic:</strong> <span id="characterMagic"></span></p>
+      <p class="character-attributes"><strong>Dexterity:</strong> <span id="characterDexterity"></span></p>
+  </div>
   </body>
 </html>
